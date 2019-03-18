@@ -1,0 +1,18 @@
+cfg/
+.cfg .data
+data/
+.names
+
+
+gpustat
+
+
+nohup ./darknet detector train cfg/logoD.data  cfg/logoD_training.cfg  darknet53.conv.74 -gpus 0 >> log_file.log  2>&1 &
+./darknet detector demo cfg/olympicpb.data cfg/olympicpb_testing.cfg data/backup/olympicpb_training.backup  -prefix test_22/22 test2/test2.mp4 -gpus 0
+./darknet detector demo cfg/olympicpb.data cfg/olympicpb_testing.cfg data/backup/olympicpb_training.backup  -prefix test_11/11 test1.mp4 -gpus 0
+tensorboard --logdir /home/ray_li/resnet2d/Graph
+tailf log_file.log
+ps aux | grep dark
+ffmpeg -framerate 50 -i test_22/22_%08d.jpg test_22_output.mp4
+ffmpeg -framerate 35  -i test_11/11_%08d.jpg test_11_71.mp4
+filters = 3*(4+1+n)
