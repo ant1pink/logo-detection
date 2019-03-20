@@ -1,7 +1,0 @@
-eyewear
-skirt
-top
-footwear
-pant
-bag
-dress
