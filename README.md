@@ -4,7 +4,6 @@
 
 2. Open yolo.py, and run the function detect_video.
 You can download the pre-trained model from here:
-https://drive.google.com/open?id=1cbuhFy-1LCoa2Sk00_0tXOTnOmK_eFGT
 
 Output: 
 a. analysis result in CSV
